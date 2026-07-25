@@ -44,13 +44,21 @@ function trackLead(label = "form") {
   }
 }
 
-/* ── Image Placeholders (replace with actual C North images) ── */
-const HERO_IMG = "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=80";
-const VILLA_IMG = "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80";
-const TOWN_IMG = "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80";
-const LAGOON_IMG = "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800&q=80";
-const QVILLA_IMG = "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80";
-const BEACH_IMG = "https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=800&q=80";
+/* ── C North Images (from EOI Kit PDF) ── */
+const HERO_IMG = "/images/hero.jpg";
+const VILLA_IMG = "/images/villa-1.jpg";
+const VILLA2_IMG = "/images/villa-2.jpg";
+const VILLA3_IMG = "/images/villa-3.jpg";
+const TOWN_IMG = "/images/townhouse-1.jpg";
+const TOWN2_IMG = "/images/townhouse-2.jpg";
+const LAGOON_IMG = "/images/lagoon-homes.jpg";
+const QVILLA_IMG = "/images/villa-3.jpg";
+const MASTERPLAN_IMG = "/images/masterplan.jpg";
+const AMENITIES_IMG = "/images/amenities-map.jpg";
+const PROMENADE_IMG = "/images/promenade.jpg";
+const LAGOON_LIFE_IMG = "/images/lagoon-life.jpg";
+const LOCATION_IMG = "/images/location-map.jpg";
+const MIMAR_IMG = "/images/mimar.jpg";
 
 type UT = "all" | "villa" | "townhouse" | "qvilla" | "lagoon";
 const UNITS = [
@@ -69,7 +77,7 @@ const FAQS = [
   { q: "من المطور العقاري والمخطط لمشروع C North؟", a: "C North من تطوير الكازار Il Cazar والتخطيط العمراني من MIMAR Architecture & Engineering — شركة دولية تأسست عام ١٩٩٧ وتعمل في الإمارات وقطر والسعودية ومصر." },
 ];
 
-const NAV = [["#about","عن المشروع"],["#units","الوحدات"],["#payment","السداد"],["#amenities","المرافق"],["#location","الموقع"],["#contact","سجل الآن"]];
+const NAV = [["#about","عن المشروع"],["#units","الوحدات"],["#payment","السداد"],["#gallery","المعرض"],["#amenities","المرافق"],["#location","الموقع"],["#contact","سجل الآن"]];
 
 const PhIcon = () => <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>;
 const ChvIcon = () => <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M6 9l6 6 6-6"/></svg>;
@@ -233,7 +241,7 @@ export default function Home() {
         </div>
         <div className="about-grid fin">
           <div className="about-img">
-            <img src={BEACH_IMG} alt="شاطئ سي نورث رأس الحكمة — C North Beach" />
+            <img src={PROMENADE_IMG} alt="شاطئ سي نورث رأس الحكمة — C North Beach" />
           </div>
           <div className="about-pts">
             {[
@@ -376,6 +384,40 @@ export default function Home() {
         </div>
       </div></section>
 
+      {/* ── GALLERY ── */}
+      <section className="sec gal" id="gallery"><div className="sec-in fin" style={{ textAlign: "center" }}>
+        <span className="sec-tag">معرض C North · Gallery</span>
+        <h2 className="sec-h" style={{ textAlign: "center" }}>
+          <em>سي نورث</em> — Boutique Beachfront Living
+        </h2>
+        <div className="gal-grid">
+          <div className="gal-it big">
+            <img src={HERO_IMG} alt="C North رأس الحكمة — المنظر الرئيسي" />
+            <div className="gal-cap">C North — إطلالة بحرية ساحرة</div>
+          </div>
+          <div className="gal-it">
+            <img src={MASTERPLAN_IMG} alt="ماستر بلان سي نورث — C North Master Plan" />
+            <div className="gal-cap">ماستر بلان C North</div>
+          </div>
+          <div className="gal-it">
+            <img src={PROMENADE_IMG} alt="بروميناد سي نورث الشاطئي" />
+            <div className="gal-cap">البروميناد الشاطئي</div>
+          </div>
+          <div className="gal-it">
+            <img src={VILLA_IMG} alt="فيلا مستقلة سي نورث الكازار" />
+            <div className="gal-cap">Standalone Villa</div>
+          </div>
+          <div className="gal-it">
+            <img src={LAGOON_LIFE_IMG} alt="لاجون سي نورث — حياة شاطئية" />
+            <div className="gal-cap">Island Lagoons</div>
+          </div>
+          <div className="gal-it">
+            <img src={TOWN_IMG} alt="تاون هاوس سي نورث C North" />
+            <div className="gal-cap">Town House</div>
+          </div>
+        </div>
+      </div></section>
+
       {/* ── AMENITIES ── */}
       <section className="am" id="amenities"><div className="am-in fin" style={{ textAlign: "center" }}>
         <span className="sec-tag" style={{ color: "var(--color-orange)" }}>مرافق C North · Amenities</span>
@@ -404,7 +446,7 @@ export default function Home() {
         </h2>
         <div className="loc-grid" style={{ textAlign: "right" }}>
           <div className="loc-img">
-            <img src={BEACH_IMG} alt="موقع C North رأس الحكمة الساحل الشمالي — C North Location Map" />
+            <img src={LOCATION_IMG} alt="موقع C North رأس الحكمة الساحل الشمالي — C North Location Map" />
           </div>
           <div className="loc-facts">
             {[
