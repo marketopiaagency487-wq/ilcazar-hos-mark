@@ -9,7 +9,7 @@ const PHONE        = "01055978559";
 const PHONE_DISPLAY = "0105 597 8559";
 const PHONE_INTL   = "+201055978559";
 const WA_NUMBER    = "201055978559";
-const WEB3_KEY     = "9f87073c-cdca-4e41-94ff-9156edbc42e8";
+const WEB3_KEY     = "b72bf3f4-c8a6-455e-8590-d68a50bef850";
 const WA_MSG       = "مرحباً، أريد الاستفسار عن مشروع سي نورث رأس الحكمة من الكازار — C North Il Cazar";
 const WA_URL       = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(WA_MSG)}`;
 
